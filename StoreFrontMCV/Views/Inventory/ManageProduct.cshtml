@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Product>
+
+<h5>Please select an option</h5>
+<br />
+<a asp-action="AddProduct" asp-controller="ProductController">Add Product</a>
+@foreach (Product p in Model)
+{
+<div style="border: solid black 1px">
+    <p>Name: @p.Name</p>
+    <p>Price: @p.Price</p>
+    <p>Quantity Available: @p.Quantity</p>
+    <p>Description: @p.Description</p>
+    <a asp-action="Update" asp-controller="ProductController" asp-route-Id="@p.Id">Update</a>
+    <a asp-action="Delete" asp-controller="ProductController" asp-route-Id="@p.Id">Delete</a>
+</div>
+}

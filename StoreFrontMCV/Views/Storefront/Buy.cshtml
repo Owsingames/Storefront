@@ -1,0 +1,15 @@
+﻿@model Product
+
+<h5>How many you like to purchase:</h5>
+<h6>@Model.Name</h6>
+<br/>
+
+<form asp-action="Result" method="post">
+    <p>Quantity:</p>
+    <input type="number" />
+    <input type="submit" />
+</form>
+
+
+
+
